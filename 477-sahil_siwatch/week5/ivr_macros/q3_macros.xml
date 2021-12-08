@@ -1,0 +1,33 @@
+<include>
+<macro name="welcome_q3" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Welcome to ECOSMOB. This is an I V R test."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press one to listen to welcome sound."/>
+<action function="execute" data="sleep(100)"/>
+<action function="play-file" data="say:Press two for freeswitch echo test."/>
+<action function="execute" data="sleep(100)"/>
+<action function="play-file" data="say:Press three to listen to count to 5."/>
+<action function="execute" data="sleep(100)"/>
+<action function="play-file" data="say:Press eight for sub menu. Press star to listen to this menu again."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+<macro name="welcome_q3_submenu" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Press one to listen to welcome sound."/>
+<action function="execute" data="sleep(100)"/>
+<action function="play-file" data="say:Press two for freeswitch echo test."/>
+<action function="execute" data="sleep(100)"/>
+<action function="play-file" data="say:Press three to listen to count to 5."/>
+<action function="execute" data="sleep(100)"/>
+<action function="play-file" data="say:Press eight for sub menu. Press star to listen to this menu again."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+</include>

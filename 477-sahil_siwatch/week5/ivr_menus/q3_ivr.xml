@@ -1,0 +1,63 @@
+<include>
+<menu name="simple_greeting"
+greet-long="phrase:welcome_q3"
+greet-short="phrase:welcome_q3_submenu"
+invalid-sound="ivr/ivr-that_was_an_invalid_entry.wav"
+exit-sound="voicemail/vm-goodbye.wav"
+tts-engine="flite"
+tts-voice="slt"
+confirm-attempts="4"
+timeout="10000"
+inter-digit-timeout="2000"
+max-failures="3"
+max-timeouts="3"
+digit-len="4">
+<!--<entry action="menu-exec-app" digits="9" param="directory default ${domain}"/>-->
+<entry digits="1" action="menu-play-sound" param="ivr/ivr-welcome.wav"/>
+<entry digits="2" action="menu-play-sound" param="ivr/ivr-to_do_a_freeswitch_echo_test.wav"/>
+<entry action="menu-play-sound" digits="3" param="say:Count one, Count two, Count three, Count four, count five"/>
+<entry action="menu-top" digits="*"/>
+<entry action="menu-sub" digits="8" param="simple_greeting_submenu"/>
+</menu>
+
+<!-- Demo IVR, Sub Menu -->
+  <menu name="simple_greeting_submenu"
+      greet-long="say:Press One or two. press three for previous menu. Press hash for repeating this menu."
+      greet-short="say:Press One or two. press three for previous menu. Press hash for repeating this menu."
+      invalid-sound="ivr/ivr-that_was_an_invalid_entry.wav"
+      exit-sound="voicemail/vm-goodbye.wav"
+      tts-engine="flite"
+      tts-voice="slt"
+      confirm-attempts="4"
+      inter-digit-timeout="2000"
+      timeout="10000"
+      max-failures="3"
+      max-timeouts="3">
+
+    <!-- The demo IVR sub menu prompt basically just says, "press star to return to previous menu..." -->
+<entry action="menu-play-sound" digits="1" param="say:You pressed 1"/>
+<entry action="menu-play-sound" digits="2" param="say:You pressed 2"/>
+<entry digits="3" action="menu-back"/>    
+<entry action="menu-top" digits="#"/>
+   </menu>
+
+  <menu name="test_flite_phrase"
+      greet-long="phrase:register_success"
+      greet-short="phrase:flite_phrase"
+      invalid-sound="ivr/ivr-that_was_an_invalid_entry.wav"
+      exit-sound="voicemail/vm-goodbye.wav"
+      tts-engine="flite"
+      tts-voice="kal"
+      confirm-attempts="4"
+      inter-digit-timeout="2000"
+      timeout="10000"
+      max-failures="3"
+      max-timeouts="3">
+
+    <!-- The demo IVR sub menu prompt basically just says, "press star to return to previous menu..." -->
+<entry action="menu-play-sound" digits="1" param="say:You pressed 1"/>
+<entry action="menu-play-sound" digits="2" param="say:You pressed 2"/>
+<entry digits="3" action="menu-back"/>    
+<entry action="menu-top" digits="#"/>
+   </menu>
+</include>

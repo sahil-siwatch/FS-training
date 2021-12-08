@@ -1,0 +1,1 @@
+freeswitch.consoleLog("INFO", "LUA HOOK FOR CALL HANG-UP EXECUTED SUCCESSFULLY\n")

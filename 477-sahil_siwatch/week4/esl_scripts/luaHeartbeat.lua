@@ -1,0 +1,1 @@
+freeswitch.consoleLog("INFO", "LUA HOOK FOR HEARTBEAT EXECUTED SUCCESSFULLY\n")

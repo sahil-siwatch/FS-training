@@ -1,0 +1,95 @@
+<include>
+
+<macro name="welcome_ecosmob" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Welcome to ECOSMOB Freeswitch Training week five task for employee number ${destination_number}"/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+<macro name="register_number" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:You are not authorized to call this number. Do you want to authorize ?"/>
+<action function="play-file" data="say:Press one for yes."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press two for no."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+<macro name="register_failure" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Please check with technical department to add number."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Thank you for calling to ECOSMOB Freeswitch"/>
+</match>
+</input>
+</macro>
+
+<macro name="register_success" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Now you are authorized. Thank You."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+<macro name="register_success" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Now you are authorized. Thank You."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+<macro name="select_language" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Please select your language of choice."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press 1 for Hindi."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press 2 for English."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press 3 for Gujarati."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press zero to repeat this menu."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press nine for main menu."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+<macro name="enter_mobile_number" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Please enter your ten digit mobile number."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+<macro name="latest_offers" pause="100">
+<input pattern="(.*)">
+<match>
+<action function="play-file" data="say:Press one for sales."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press two for support."/>
+<action function="execute" data="sleep(250)"/>
+<action function="play-file" data="say:Press three for latest offers."/>
+<action function="execute" data="sleep(250)"/>
+</match>
+</input>
+</macro>
+
+</include>
+
+
